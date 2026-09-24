@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Tooling / caches
+site/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+profile_default/
+ipython_config.py
+
+# Environments
+.venv/
+venv/
+venv*/
+env/
+ENV/
+.python-version
+
+# Secrets (keep .env.example as the committed template)
+.env
+.env.*
+!.env.example
+.envrc
+*.pem
+*.key
+
+# Output written by save() in the README examples and notebooks
+out/
+examples/out/
+data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

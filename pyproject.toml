@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cspan"
+dynamic = ["version"]
+description = "A Python client for the C-SPAN Archives API."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Hanif Sajid", email = "hanifwrites@gmail.com" }]
+maintainers = [{ name = "Hanif Sajid", email = "hanifwrites@gmail.com" }]
+keywords = ["c-span", "cspan", "congress", "video", "archives", "api", "client"]
+dependencies = ["requests>=2.25"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.0"]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "types-requests",
+    "pandas>=1.0",
+]
+docs = [
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.25",
+]
+
+[project.urls]
+Homepage = "https://github.com/hanifsajid/cspan"
+Documentation = "https://hanifsajid.com/cspan/"
+API-Docs = "https://www.c-span.org/api/c-span/"
+Repository = "https://github.com/hanifsajid/cspan"
+Issues = "https://github.com/hanifsajid/cspan/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "cspan._version.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cspan = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 90
+src = ["src", "tests"]
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "C4"]
+
+[tool.mypy]
+packages = ["cspan"]
+strict = false
+warn_unused_ignores = true
+warn_redundant_casts = true
+ignore_missing_imports = true
