@@ -10,7 +10,7 @@ the client (`output_format=`) or per call (`format=`):
 | `"json"` *(default)* | Decoded JSON (`dict`/`list`), exactly as sent. |
 | `"records"` | A flat `list[dict]` of result rows. |
 | `"csv"` | A CSV string (nested values become JSON text). |
-| `"dataframe"` | A `pandas.DataFrame` (`pip install -e ".[pandas]"`). |
+| `"dataframe"` | A `pandas.DataFrame` (`pip install "cspan[pandas]"`). |
 
 ```python
 client.people(last="Pelosi", format="csv")

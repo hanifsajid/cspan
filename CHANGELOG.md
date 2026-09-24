@@ -6,6 +6,11 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-24
+
+First release on PyPI: `pip install cspan`. Documentation site at
+https://hanifsajid.com/cspan/.
+
 ### Fixed
 - Empty search results no longer produce a phantom row. When nothing matches,
   the API omits the result key and returns only `{"cursor": ...}`; `to_records`

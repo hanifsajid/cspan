@@ -4,6 +4,7 @@ A Python client for the [C-SPAN Archives API](https://www.c-span.org/api/c-span/
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![PyPI](https://img.shields.io/pypi/v/cspan)
 
 Typed, tested, and dependency-light. Covers the full documented API
 (v2025-06-13) with retries, fast-fail validation, cursor pagination, pluggable
@@ -11,8 +12,6 @@ output formats (JSON / records / CSV / DataFrame), and one-call export to disk
 (CSV / JSON / JSONL / XLSX / Parquet).
 
 > Base URL: `https://api.c-spanarchives.org/2.0`
-
-> **Status:** not yet published to PyPI — install from source (below).
 
 ## Access (API key only)
 
@@ -32,11 +31,16 @@ client = CSpanClient("your-api-key")   # or pass it explicitly
 
 ## Install
 
-Install from a local checkout (not yet on PyPI):
+```bash
+pip install cspan               # core
+pip install "cspan[pandas]"     # + DataFrame output
+```
+
+For development, from a clone of the repo:
 
 ```bash
-pip install -e .                # core
-pip install -e ".[pandas]"      # + DataFrame output
+git clone https://github.com/hanifsajid/cspan
+cd cspan
 pip install -e ".[dev]"         # + test/lint/type tooling
 ```
 
@@ -72,7 +76,7 @@ the client (`output_format=`) or per call (`format=`):
 | `"json"` *(default)* | Decoded JSON (`dict`/`list`), exactly as sent. |
 | `"records"` | A flat `list[dict]` of result rows. |
 | `"csv"` | A CSV string (nested values become JSON text). |
-| `"dataframe"` | A `pandas.DataFrame` (`pip install -e ".[pandas]"`). |
+| `"dataframe"` | A `pandas.DataFrame` (`pip install "cspan[pandas]"`). |
 
 ```python
 client.people(last="Pelosi", format="csv")

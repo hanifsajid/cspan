@@ -9,8 +9,7 @@ output formats (JSON / records / CSV / DataFrame), and one-call export to disk
 
 Base URL: `https://api.c-spanarchives.org/2.0`
 
-!!! note "Status"
-    Not yet published to PyPI. Install from a local checkout (below).
+[![PyPI](https://img.shields.io/pypi/v/cspan)](https://pypi.org/project/cspan/)
 
 ## Access (API key only)
 
@@ -36,10 +35,15 @@ client = CSpanClient("your-api-key")   # or pass it explicitly
 ## Install
 
 ```bash
+pip install cspan               # core
+pip install "cspan[pandas]"     # + DataFrame output
+```
+
+For development, from a clone of the repo:
+
+```bash
 git clone https://github.com/hanifsajid/cspan
 cd cspan
-pip install -e .                # core
-pip install -e ".[pandas]"      # + DataFrame output
 pip install -e ".[dev]"         # + test/lint/type tooling
 ```
 
