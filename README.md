@@ -4,7 +4,7 @@ A Python client for the [C-SPAN Archives API](https://www.c-span.org/api/c-span/
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![PyPI](https://img.shields.io/pypi/v/cspan)
+![PyPI](https://img.shields.io/pypi/v/cspan?cacheSeconds=3600)
 
 Typed, tested, and dependency-light. Covers the full documented API
 (v2025-06-13) with retries, fast-fail validation, cursor pagination, pluggable

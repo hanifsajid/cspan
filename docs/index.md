@@ -9,7 +9,7 @@ output formats (JSON / records / CSV / DataFrame), and one-call export to disk
 
 Base URL: `https://api.c-spanarchives.org/2.0`
 
-[![PyPI](https://img.shields.io/pypi/v/cspan)](https://pypi.org/project/cspan/)
+[![PyPI](https://img.shields.io/pypi/v/cspan?cacheSeconds=3600)](https://pypi.org/project/cspan/)
 
 ## Access (API key only)
 
